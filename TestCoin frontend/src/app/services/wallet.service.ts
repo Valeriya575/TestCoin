@@ -17,7 +17,4 @@ export class WalletService {
     return this.http.get<Wallet[]>(constructedUrl);
   }
   
-  // getAllWallets(): Observable<Wallet[]> {
-    // return this.http.get<Wallet[]>(this.url);
-  // }
 }
