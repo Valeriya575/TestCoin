@@ -17,8 +17,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class ExchangeRateComponent implements OnInit {
 	
 	exchRate : ExchangeRate[] = [];
-	//dateFromParameter = "";
-	//dateToParameter = "";
 	eurAvg = 0;
 	usdAvg = 0;
 	gbpAvg = 0;
