@@ -11,20 +11,6 @@ import com.example.demo.model.TUser;
 @RestController
 public class UserServiceController {
 
-//    @RequestMapping(value= "/users/wallets", method= RequestMethod.GET)
-//    public ResponseEntity<TUser>getUser1(@RequestParam int id){
-//
-//        TUser user = new TUser();
-//        user.setId(id);
-//        user.setFullName("Honey");
-//        user.setAddress("Maribor");
-//        user.setPostal(3);
-//        user.setCity("Ljubljana");
-//        user.setCOIN_VALUE(1);
-//
-//        return new ResponseEntity<TUser>(user, HttpStatus.OK);
-//
-//    }
     @CrossOrigin
     @RequestMapping(value="/api/users/{id}", method = RequestMethod.GET)
     public ResponseEntity <TUser> getUser(@PathVariable int id) {
