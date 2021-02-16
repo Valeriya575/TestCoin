@@ -1,0 +1,25 @@
+  <style>
+  
+	 h2 {text-align: center;}
+    .left   {text-align:left;}
+    .center {text-align:center;}
+    .right  {text-align:right;}
+	button {margin-top: 20px;}
+
+  </style>
+  
+  	<h3 [ngStyle]="{ 'margin-bottom.px': 16 }">Latest wallet of User {{latestWallet.idUser}}</h3>
+	<nz-list nzBordered >
+	
+      	<nz-list-item ><span nz-typography>ID</span> {{latestWallet.id}}</nz-list-item>
+      	<nz-list-item ><span nz-typography>User ID</span> {{latestWallet.idUser}}</nz-list-item>
+      	<nz-list-item ><span nz-typography>Coin token</span> {{latestWallet.coin_token}}</nz-list-item>
+      	<nz-list-item ><span nz-typography>Date and Time</span> {{latestWallet.countTimeStamp}}</nz-list-item>
+    </nz-list>
+	<br/>
+	<h3>Coin value = {{wallets.length}}<h3>
+
+	<button (click) = "showUser()" nz-button nzType="primary">User</button>
+	<button (click) = "showExchangeRates()" nz-button nzType="primary" style="margin:5px;">Exchange rates</button>
+
+	

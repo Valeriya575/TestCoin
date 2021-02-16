@@ -1,0 +1,55 @@
+  <style>
+  
+	 h2 {text-align: center;}
+    .left   {text-align:left;}
+    .center {text-align:center;}
+    .right  {text-align:right;}
+	button {margin-top:20px;}
+
+  </style>
+  
+  <h2>Exchange Rate for period from 16.4.2019 to 6.9.2020</h2>
+    <nz-table
+	    #exchangeRatesTable
+		[nzData]="exchRate"
+		
+	>
+      <thead >
+        <tr>
+          <th scope="col" class="center" width="10%">Date</th>
+          <th scope="col" class="center" width="10%">Euro Rate</th>
+		  <th scope="col" class="center" width="10%">Euro Median</th>
+		  <th scope="col" class="center" width="10%">USD Rate</th>
+          <th scope="col" class="center" width="10%">USD Median</th>
+		  <th scope="col" class="center" width="10%">GBP Rate</th>
+          <th scope="col" class="center" width="10%">GBP Median</th>
+        </tr>
+      </thead>
+      <tbody>
+	    <tr *ngFor="let rate of exchangeRatesTable.data">
+          <td class="center">{{rate.excRateDate}}</td>
+		  
+		  <td class="center">
+			  <span *ngIf="(rate.excRateEur > eurAvg)" style="color:green;">{{rate.excRateEur}}</span>
+			  <span *ngIf="(rate.excRateEur === eurAvg)" style="color:blue;"> {{rate.excRateEur}}</span>
+			  <span *ngIf="(rate.excRateEur < eurAvg)" style="color:red;"> {{rate.excRateEur}}</span>
+		  </td>
+		  <td class="center">{{eurMedian}}</td>
+		  <td class="center">
+			  <span *ngIf="(rate.excRateEur > eurAvg)" style="color:green;">{{rate.excRateUsd}}</span>
+			  <span *ngIf="(rate.excRateEur === eurAvg)" style="color:blue;">{{rate.excRateUsd}}</span>
+			  <span *ngIf="(rate.excRateEur < eurAvg)" style="color:red;"> {{rate.excRateUsd}}</span>
+		  </td>
+		  <td class="center">{{usdMedian}}</td>
+		  <td class="center">
+			  <span *ngIf="(rate.excRateEur > eurAvg)" style="color:green;">{{rate.excRateGbp}}</span>
+			  <span *ngIf="(rate.excRateEur === eurAvg)" style="color:blue;">{{rate.excRateGbp}}</span>
+			  <span *ngIf="(rate.excRateEur < eurAvg)" style="color:red;"> {{rate.excRateGbp}}</span>
+		  </td>
+		  <td class="center">{{gbpMedian}}</td>
+		</tr>
+      </tbody>
+	  
+    </nz-table>
+
+	<button (click) = "showHomePage()" nz-button nzType="primary">Home</button>

@@ -1,0 +1,1 @@
+Demo application for crypto currency value tracking. Made in Angular and Java Spring.

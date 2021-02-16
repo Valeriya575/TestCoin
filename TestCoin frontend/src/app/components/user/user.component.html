@@ -1,0 +1,51 @@
+    <style>
+  
+	 h2 {text-align: center;}
+    .left   {text-align:left;}
+    .center {text-align:center;}
+    .right  {text-align:right;}
+	button {margin-top: 20px;}
+  </style>
+  
+  <!-- <h2>User {{user.id}}</h2> -->
+    <!-- <nz-table [nzData]="['']"> -->
+      <!-- <thead> -->
+        <!-- <tr> -->
+          <!-- <th scope="col" class="center" width="10%">ID</th> -->
+          <!-- <th scope="col" class="center" width="10%">Name</th> -->
+		  <!-- <th scope="col" class="center" width="10%">Address</th> -->
+          <!-- <th scope="col" class="center" width="10%">Postal</th> -->
+		   <!-- <th scope="col" class="center" width="10%">City</th> -->
+		   <!-- <th scope="col" class="center" width="10%">coin_VALUE</th> -->
+        <!-- </tr> -->
+      <!-- </thead> -->
+      <!-- <tbody> -->
+         <!-- <tr> -->
+          <!-- <td class="center">{{user.id}}</td> -->
+          <!-- <td class="center">{{user.fullName}}</td> -->
+		  <!-- <td class="center">{{user.address}}</td> -->
+		  <!-- <td class="center">{{user.postal}}</td> -->
+		  <!-- <td class="center">{{user.city}}</td> -->
+		  <!-- <td class="center">{{user.coin_VALUE}}</td> -->
+        <!-- </tr> -->
+      <!-- </tbody> -->
+    <!-- </nz-table> -->
+	
+   
+	<h3 [ngStyle]="{ 'margin-bottom.px': 16 }">User {{user.id}}</h3>
+	<nz-list nzBordered >
+	
+      	<nz-list-item ><span nz-typography>ID</span> {{user.id}}</nz-list-item>
+      	<nz-list-item ><span nz-typography>Name</span> {{user.fullName}}</nz-list-item>
+      	<nz-list-item ><span nz-typography>Address</span> {{user.address}}</nz-list-item>
+      	<nz-list-item ><span nz-typography>Postal</span> {{user.postal}}</nz-list-item>
+      	<nz-list-item ><span nz-typography>City</span> {{user.city}}</nz-list-item>
+      	<nz-list-item ><span nz-typography>Coin value</span> {{user.coin_VALUE}}</nz-list-item>
+
+
+    </nz-list>
+
+	<button (click) = "showWallets()" nz-button nzType="primary">Wallets</button>
+	<button (click) = "showExchangeRates()" nz-button nzType="primary" style="margin:5px;">Exchange rates</button>
+
+
