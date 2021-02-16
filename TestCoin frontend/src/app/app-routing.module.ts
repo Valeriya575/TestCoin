@@ -10,7 +10,6 @@ const routes: Routes = [
 	{ path: 'wallets/:idUser', component: WalletComponent},
 	{ path: 'exchange-rates', component: ExchangeRateComponent},
     { path: '', pathMatch: 'full', redirectTo: '/users/1' },
-  // { path: 'welcome', loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule) }
 ];
 
 @NgModule({
